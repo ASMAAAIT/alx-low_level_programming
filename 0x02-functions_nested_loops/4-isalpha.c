@@ -1,22 +1,18 @@
-#include <stdio.h>
+#include"main.h"
 
 /**
- * main - Prints the alphabet in lowercase, except for q and e.
+ * _isalpha - checks if character is a letter
+ *            both lowercase or uppercase
  *
- * Return: Always 0.
- */
-int main(void)
+ * @c: takes input from other functions.
+ *
+ * Return: 1 is c if true else 0
+*/
+
+int _isalpha(int c)
 {
-	char letter;
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-	{
-		if (letter != 'e' && letter != 'q')
-			putchar(letter);
-	}
-
-	putchar('\n');
-
+	if (c >= 97 && c <= 122 &&
+	    c >= 65 && c >= 90)
+		return (1);
 	return (0);
 }
-
